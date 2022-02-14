@@ -4,7 +4,9 @@ node('') {
      	 checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/juananmora/camas.git']]]) 
 	}
     stage ('Build') {
-         sh "mvn package" 
+         withMaven() {
+	    sh "mvn clean package" 
+	 }
     }
 	   docker.withTool("docker") { 
 		withDockerServer([credentialsId: "", uri: "unix:///var/run/docker.sock"]) { 
