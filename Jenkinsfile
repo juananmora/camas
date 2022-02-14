@@ -4,7 +4,7 @@ node {
      	 checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/juananmora/camas.git']]]) 
 	}
     stage ('Build') {
-         withMaven() {
+         withMaven(maven: 'maven 3.6.3') {
 	    sh "mvn clean package" 
 	 }
     }
