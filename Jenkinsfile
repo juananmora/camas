@@ -1,4 +1,4 @@
-node('java-docker') {
+node('java-docker-slave') {
     stage ('CheckOut GitHub') {
         
      	 checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/juananmora/camas.git']]]) 
