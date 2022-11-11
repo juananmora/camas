@@ -17,6 +17,6 @@ public class Cama {
     private EstadoOcupacion ocupacion;
 
     public enum EstadoOcupacion {
-        DISPONIBLES, OCUPADO, RESERVADO
+        DISPONIBLE, OCUPADO, RESERVADO
     }
 }
