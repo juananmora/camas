@@ -7,6 +7,6 @@ metadata:
     github.com/project-slug: juananmora/camas
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: api
+  type: service
   lifecycle: production
   owner: "team-a"
