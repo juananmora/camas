@@ -13,7 +13,7 @@ node {
       
 			stage ('Build Image'){
 				sh "docker build -t juananmora/camas:'$BUILD_NUMBER' ."
-				sh "docker login -u juananmora -p gloyjonas"
+				sh "docker login -u juananmora -p xxxx"
 				sh "docker push juananmora/camas:'$BUILD_NUMBER'"
 				sh "docker image rm juananmora/camas:'$BUILD_NUMBER'"
 	//			sleep(200)
