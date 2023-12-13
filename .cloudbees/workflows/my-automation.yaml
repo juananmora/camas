@@ -13,3 +13,6 @@ jobs:
         kind: scan
         with:
           language: java
+      - uses: Mend-Sast
+        name: Mend
+        kind: scan
